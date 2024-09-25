@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Button</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<style>
+  .product-data {
+    display: none;
+}
+</style>
+<body>
+    <h4> Download your ACHC Marketing Kit</h4>
+    <h2>ACHC Logos & Seals</h2>
+
+<div>
+
+  <div class="product-container">
+    <div class="product-wrapper">
+      <div class="product-menu">
+        <select name="" id="products">
+          <option value="0" selected>Select Product</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+    </div>
+  
+    <div class="product-content">
+      <div id="1" class="product-data">1</div>
+      <div id="2" class="product-data">2</div>
+      <div id="3" class="product-data">3</div>
+    </div>
+  </div>
+
+
+</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+  $("#products").on('change', function(){
+    $(".product-data").hide();
+    $("#" + $(this).val()).fadeIn(700);
+  }).change();
+})
+</script>
+</html>
